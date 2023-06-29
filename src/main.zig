@@ -502,8 +502,8 @@ pub fn paintBuf() void {
         bs_sz_avg = bs_sz_avg * (bs_frame_tic - 1) / bs_frame_tic + bs_len / bs_frame_tic;
     }
 
-    t_dur = @floatFromInt(f64, t_now - t_start) / 1000.0;
-    fps = @floatFromInt(f64, bs_frame_tic) / t_dur;
+    t_dur = @as(f64, @floatFromInt(t_now - t_start)) / 1000.0;
+    fps = @as(f64, @floatFromInt(bs_frame_tic)) / t_dur;
 
     emit(fg[0]);
     emitFmt("mem: {s:.2} min / {s:.2} avg / {s:.2} max [ {d:.2} fps ]", .{ std.fmt.fmtIntSizeBin(bs_sz_min), std.fmt.fmtIntSizeBin(bs_sz_avg), std.fmt.fmtIntSizeBin(bs_sz_max), fps });
@@ -516,8 +516,8 @@ pub fn freeBuf() void {
 
 pub fn showDoomFire() void {
     //term size => fire size
-    const FIRE_H: u16 = @intCast(u16, term_sz.height) * 2;
-    const FIRE_W: u16 = @intCast(u16, term_sz.width);
+    const FIRE_H: u16 = @as(u16, @intCast(term_sz.height)) * 2;
+    const FIRE_W: u16 = @as(u16, @intCast(term_sz.width));
     const FIRE_SZ: u16 = FIRE_H * FIRE_W;
     const FIRE_LAST_ROW: u16 = (FIRE_H - 1) * FIRE_W;
 
