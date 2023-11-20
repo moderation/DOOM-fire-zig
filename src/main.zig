@@ -577,7 +577,7 @@ pub fn showDoomFire() void {
     defer freeBuf();
 
     //when there is an ez way to poll for key stroke...do that.  for now, ctrl+c!
-    var ok = true;
+    const ok = true;
     while (ok) {
 
         //update fire buf
