@@ -5,7 +5,7 @@
 
 The doom-fire algo can push upwards of 180k a frame - results may vary!  It is, to my surprise, a nice TTY stress test.
 
-As a comparable, this is the younger sibling of a node variant ( https://github.com/const-void/DOOM-fire-node ).
+As a comparison, this is the younger sibling of a node variant ( https://github.com/const-void/DOOM-fire-node ).
 
 # INSTALL
 Tested on OX Monterey / M1 w/zig 0.9...
@@ -29,6 +29,8 @@ $ zig build run
 * Alacritty (artix linux) - great
 
 # Inspiration / Credits
+* Thanks to contributors for your support!
+ 
 * doom fire    - https://github.com/filipedeschamps/doom-fire-algorithm,  https://github.com/fabiensanglard/DoomFirePSX/blob/master/flames.html
 * color layout - https://en.wikipedia.org/wiki/ANSI_escape_code
 * ansi codes   - http://xfree86.org/current/ctlseqs.html
